@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/llyEquationRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="3dp"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/tvBrace"
+            android:layout_width="14dp"
+            android:layout_height="43dp"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:text="{"
+            android:textSize="32sp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginLeft="3dp"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@id/tvBrace">
+
+            <LinearLayout
+                android:id="@+id/llyEquation1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tvEquation1"
+                    android:layout_width="14dp"
+                    android:layout_height="22dp"
+                    android:background="@drawable/shape_dotted_stroke"
+                    android:gravity="center" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llyEquation2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tvEquation2"
+                    android:layout_width="14dp"
+                    android:layout_height="22dp"
+                    android:background="@drawable/shape_dotted_stroke" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

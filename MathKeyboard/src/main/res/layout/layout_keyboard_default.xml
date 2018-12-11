@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:customview="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/llDefaultLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal">
+
+        <cn.wdcloud.appsupport.latex.widget.BorderTextView
+            android:id="@+id/ivFraction"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            customview:borderDir="RIGHT,BOTTOM"
+            android:gravity="center"
+            android:text="&#xe6ab;"
+            android:textSize="32sp"/>
+
+        <cn.wdcloud.appsupport.latex.widget.BorderTextView
+            android:id="@+id/tvBracketsLeft"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="("
+            android:textSize="25sp"
+            customview:borderDir="RIGHT,BOTTOM"/>
+
+        <cn.wdcloud.appsupport.latex.widget.BorderTextView
+            android:id="@+id/tvBracketsRight"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text=")"
+            android:textSize="25sp"
+            customview:borderDir="RIGHT,BOTTOM" />
+
+        <cn.wdcloud.appsupport.latex.widget.BorderTextView
+            android:id="@+id/tvAddSubtract"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="±"
+            android:textSize="25sp"
+            customview:borderDir="RIGHT,BOTTOM" />
+
+        <cn.wdcloud.appsupport.latex.widget.BorderTextView
+            android:id="@+id/ivDelete1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            customview:borderDir="BOTTOM"
+            android:gravity="center"
+            android:text="&#xe629;"
+            android:textSize="30sp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal">
+
+        <cn.wdcloud.appsupport.latex.widget.BorderTextView
+            android:id="@+id/ivSqrt2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            customview:borderDir="LEFT,RIGHT,BOTTOM"
+            android:gravity="center"
+            android:text="&#xe6af;"
+            android:textSize="26sp"/>
+
+        <cn.wdcloud.appsupport.latex.widget.BorderTextView
+            android:id="@+id/tvNum7"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="7"
+            android:textSize="25sp"
+            customview:borderDir="RIGHT,BOTTOM" />
+
+        <cn.wdcloud.appsupport.latex.widget.BorderTextView
+            android:id="@+id/tvNum8"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="8"
+            android:textSize="25sp"
+            customview:borderDir="RIGHT,BOTTOM" />
+
+        <cn.wdcloud.appsupport.latex.widget.BorderTextView
+            android:id="@+id/tvNum9"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="9"
+            android:textSize="25sp"
+            customview:borderDir="RIGHT,BOTTOM" />
+
+        <cn.wdcloud.appsupport.latex.widget.BorderTextView
+            android:id="@+id/tvPlus"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="+"
+            android:textSize="25sp"
+            customview:borderDir="BOTTOM" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal">
+
+        <cn.wdcloud.appsupport.latex.widget.BorderTextView
+            android:id="@+id/ivPower2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            customview:borderDir="LEFT,RIGHT,BOTTOM"
+            android:gravity="center"
+            android:text="&#xe6ae;"
+            android:textSize="32sp"/>
+
+        <cn.wdcloud.appsupport.latex.widget.BorderTextView
+            android:id="@+id/tvNum4"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="4"
+            android:textSize="25sp"
+            customview:borderDir="RIGHT,BOTTOM" />
+
+        <cn.wdcloud.appsupport.latex.widget.BorderTextView
+            android:id="@+id/tvNum5"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="5"
+            android:textSize="25sp"
+            customview:borderDir="RIGHT,BOTTOM" />
+
+        <cn.wdcloud.appsupport.latex.widget.BorderTextView
+            android:id="@+id/tvNum6"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="6"
+            android:textSize="25sp"
+            customview:borderDir="RIGHT,BOTTOM" />
+
+        <cn.wdcloud.appsupport.latex.widget.BorderTextView
+            android:id="@+id/tvMinus"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="-"
+            android:textSize="25sp"
+            customview:borderDir="BOTTOM" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal">
+
+        <cn.wdcloud.appsupport.latex.widget.BorderTextView
+            android:id="@+id/tvNotEqual"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="≠"
+            android:textSize="25sp"
+            customview:borderDir="RIGHT,BOTTOM" />
+
+        <cn.wdcloud.appsupport.latex.widget.BorderTextView
+            android:id="@+id/tvNum1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="1"
+            android:textSize="25sp"
+            customview:borderDir="RIGHT,BOTTOM" />
+
+        <cn.wdcloud.appsupport.latex.widget.BorderTextView
+            android:id="@+id/tvNum2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="2"
+            android:textSize="25sp"
+            customview:borderDir="RIGHT,BOTTOM" />
+
+        <cn.wdcloud.appsupport.latex.widget.BorderTextView
+            android:id="@+id/tvNum3"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="3"
+            android:textSize="25sp"
+            customview:borderDir="RIGHT,BOTTOM" />
+
+        <cn.wdcloud.appsupport.latex.widget.BorderTextView
+            android:id="@+id/tvMultiplication"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="×"
+            android:textSize="25sp"
+            customview:borderDir="BOTTOM" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal">
+
+        <cn.wdcloud.appsupport.latex.widget.BorderTextView
+            android:id="@+id/tvDivision"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="÷"
+            android:textSize="25sp"
+            customview:borderDir="LEFT,RIGHT" />
+
+        <cn.wdcloud.appsupport.latex.widget.BorderTextView
+            android:id="@+id/tvComma"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text=","
+            android:textSize="25sp"
+            customview:borderDir="RIGHT" />
+
+        <cn.wdcloud.appsupport.latex.widget.BorderTextView
+            android:id="@+id/tvNum0"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="0"
+            android:textSize="25sp"
+            customview:borderDir="RIGHT" />
+
+        <cn.wdcloud.appsupport.latex.widget.BorderTextView
+            android:id="@+id/tvDecimalPoint"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="."
+            android:textSize="25sp"
+            customview:borderDir="RIGHT" />
+
+        <cn.wdcloud.appsupport.latex.widget.BorderTextView
+            android:id="@+id/tvEqual"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="="
+            android:textSize="25sp"
+            customview:borderDir="NULL" />
+    </LinearLayout>
+</LinearLayout>

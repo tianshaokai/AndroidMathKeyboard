@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/llyPowerRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="3dp"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:id="@+id/llyMultiplier"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="12dp"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/tvMultiplierNone"
+            android:layout_width="22dp"
+            android:layout_height="26dp"
+            android:background="@drawable/shape_dotted_stroke" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llyPower"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/llyMultiplier"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="3dp"
+        android:layout_marginLeft="2dp">
+
+        <TextView
+            android:id="@+id/tvPowerNone"
+            android:layout_width="10dp"
+            android:layout_height="12dp"
+
+            android:background="@drawable/shape_dotted_stroke" />
+
+    </LinearLayout>
+
+</LinearLayout>

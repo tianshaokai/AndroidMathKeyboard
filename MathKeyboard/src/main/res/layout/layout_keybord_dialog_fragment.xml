@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="340dp"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="90dp">
+
+        <RelativeLayout
+            android:id="@+id/rvConfirmLayout"
+            android:layout_width="100dp"
+            android:layout_height="90dp"
+            android:layout_alignParentRight="true">
+
+            <TextView
+                android:id="@+id/tvConfirm"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#b8b8b8"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:text="@string/close"
+                android:textSize="18dp" />
+        </RelativeLayout>
+
+        <HorizontalScrollView
+            android:id="@+id/hsvLatex"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toLeftOf="@id/rvConfirmLayout">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <cn.wdcloud.appsupport.latex.widget.EditView
+                    android:id="@+id/evLatexView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:minHeight="90dp"
+                    android:paddingLeft="7dp"
+                    android:paddingRight="8dp"/>
+
+            </ScrollView>
+
+        </HorizontalScrollView>
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:id="@+id/llMathKeyBoardLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvDefault"
+                android:layout_width="80dp"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:text="@string/default_type"
+                android:textSize="18sp"
+                android:background="@drawable/selected_tv"
+                />
+
+            <TextView
+                android:id="@+id/tvAlgebra"
+                android:layout_width="80dp"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:textSize="18sp"
+                android:text="@string/algebra"
+                android:background="@drawable/selected_tv"
+                />
+
+            <TextView
+                android:id="@+id/tvGeometry"
+                android:layout_width="80dp"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:textSize="18sp"
+                android:text="@string/geometry"
+                android:background="@drawable/selected_tv"
+                />
+
+            <TextView
+                android:id="@+id/tvLetter"
+                android:layout_width="80dp"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:textSize="18sp"
+                android:text="@string/character"
+                android:background="@drawable/selected_tv"
+                />
+
+            <TextView
+                android:layout_width="80dp"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:text=""
+                android:background="@drawable/selected_tv"
+                />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <include layout="@layout/layout_keyboard_default"/>
+            <include layout="@layout/layout_keyboard_algebra"/>
+            <include layout="@layout/layout_keyboard_geometry"/>
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <include layout="@layout/layout_keyboard_latter"/>
+
+
+</LinearLayout>

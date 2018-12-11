@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/llLatterKeyBoardLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground_normal"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnLatterQ"
+            style="@style/btnLatterKeyboard"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textAllCaps="false"
+            android:text="q" />
+
+        <Button
+            android:id="@+id/btnLatterW"
+            style="@style/btnLatterKeyboard"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textAllCaps="false"
+            android:text="w" />
+
+        <Button
+            android:id="@+id/btnLatterE"
+            style="@style/btnLatterKeyboard"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textAllCaps="false"
+            android:text="e" />
+
+        <Button
+            android:id="@+id/btnLatterR"
+            style="@style/btnLatterKeyboard"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textAllCaps="false"
+            android:text="r" />
+
+        <Button
+            android:id="@+id/btnLatterT"
+            style="@style/btnLatterKeyboard"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textAllCaps="false"
+            android:text="t" />
+
+        <Button
+            android:id="@+id/btnLatterY"
+            style="@style/btnLatterKeyboard"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textAllCaps="false"
+            android:text="y" />
+
+        <Button
+            android:id="@+id/btnLatterU"
+            style="@style/btnLatterKeyboard"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textAllCaps="false"
+            android:text="u" />
+
+        <Button
+            android:id="@+id/btnLatterI"
+            style="@style/btnLatterKeyboard"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textAllCaps="false"
+            android:text="i" />
+
+        <Button
+            android:id="@+id/btnLatterO"
+            style="@style/btnLatterKeyboard"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textAllCaps="false"
+            android:text="o" />
+
+        <Button
+            android:id="@+id/btnLatterP"
+            style="@style/btnLatterKeyboard"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textAllCaps="false"
+            android:text="p" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnLatterA"
+            style="@style/btnLatterKeyboard"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textAllCaps="false"
+            android:text="a" />
+
+        <Button
+            android:id="@+id/btnLatterS"
+            style="@style/btnLatterKeyboard"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textAllCaps="false"
+            android:text="s" />
+
+        <Button
+            android:id="@+id/btnLatterD"
+            style="@style/btnLatterKeyboard"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textAllCaps="false"
+            android:text="d" />
+
+        <Button
+            android:id="@+id/btnLatterF"
+            style="@style/btnLatterKeyboard"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textAllCaps="false"
+            android:text="f" />
+
+        <Button
+            android:id="@+id/btnLatterG"
+            style="@style/btnLatterKeyboard"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textAllCaps="false"
+            android:text="g" />
+
+        <Button
+            android:id="@+id/btnLatterH"
+            style="@style/btnLatterKeyboard"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textAllCaps="false"
+            android:text="h" />
+
+        <Button
+            android:id="@+id/btnLatterJ"
+            style="@style/btnLatterKeyboard"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textAllCaps="false"
+            android:text="j" />
+
+        <Button
+            android:id="@+id/btnLatterK"
+            style="@style/btnLatterKeyboard"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textAllCaps="false"
+            android:text="k" />
+
+        <Button
+            android:id="@+id/btnLatterL"
+            style="@style/btnLatterKeyboard"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textAllCaps="false"
+            android:text="l" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/tvLowerUpperCase"
+            android:layout_width="25dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="6dp"
+            android:layout_weight="1"
+            android:background="@drawable/btn_latter_keyboard_bg"
+            android:gravity="center"
+            android:text="大写" />
+
+        <Button
+            android:id="@+id/btnLatterZ"
+            style="@style/btnLatterKeyboard"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textAllCaps="false"
+            android:text="z" />
+
+        <Button
+            android:id="@+id/btnLatterX"
+            style="@style/btnLatterKeyboard"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textAllCaps="false"
+            android:text="x" />
+
+        <Button
+            android:id="@+id/btnLatterC"
+            style="@style/btnLatterKeyboard"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textAllCaps="false"
+            android:text="c" />
+
+        <Button
+            android:id="@+id/btnLatterV"
+            style="@style/btnLatterKeyboard"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textAllCaps="false"
+            android:text="v" />
+
+        <Button
+            android:id="@+id/btnLatterB"
+            style="@style/btnLatterKeyboard"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textAllCaps="false"
+            android:text="b" />
+
+        <Button
+            android:id="@+id/btnLatterN"
+            style="@style/btnLatterKeyboard"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textAllCaps="false"
+            android:text="n" />
+
+        <Button
+            android:id="@+id/btnLatterM"
+            style="@style/btnLatterKeyboard"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textAllCaps="false"
+            android:text="m" />
+
+        <Button
+            android:id="@+id/btnDelete"
+            style="@style/btnLatterKeyboard"
+            android:layout_width="20dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="删除" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/tvBack"
+            android:layout_width="20dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:layout_weight="1"
+            android:background="@drawable/btn_latter_keyboard_bg"
+            android:gravity="center"
+            android:text="返回" />
+
+        <Button
+            android:id="@+id/btnComma"
+            style="@style/btnLatterKeyboard"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="," />
+
+        <Button
+            android:id="@+id/btnDivision"
+            style="@style/btnLatterKeyboard"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="÷" />
+
+        <Button
+            android:id="@+id/btnPlus"
+            style="@style/btnLatterKeyboard"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="+" />
+
+        <Button
+            android:id="@+id/btnMinus"
+            style="@style/btnLatterKeyboard"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="-" />
+
+        <Button
+            android:id="@+id/btnMultiplication"
+            style="@style/btnLatterKeyboard"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="×" />
+
+        <Button
+            android:id="@+id/btnEqual"
+            style="@style/btnLatterKeyboard"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="=" />
+    </LinearLayout>
+</LinearLayout>

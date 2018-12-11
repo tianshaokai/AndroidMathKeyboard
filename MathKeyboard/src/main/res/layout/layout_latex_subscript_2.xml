@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/llySubScriptRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="3dp"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/llyBase"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/tvBase"
+                android:layout_width="24dp"
+                android:layout_height="29dp"
+                android:background="@drawable/shape_dotted_stroke"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llySub"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_toRightOf="@+id/llyBase"
+            android:layout_marginLeft="3dp"
+            android:layout_marginTop="24dp"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/tvSub"
+                android:layout_width="12dp"
+                android:layout_height="14dp"
+                android:background="@drawable/shape_dotted_stroke"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

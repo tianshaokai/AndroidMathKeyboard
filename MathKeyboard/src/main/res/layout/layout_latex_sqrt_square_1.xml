@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/sqrt_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="5dp"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+            android:layout_marginTop="2dp"
+            android:src="@drawable/icon_sqrt" />
+
+        <LinearLayout
+            android:id="@+id/radicand_root"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="18dp"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_gravity="center">
+
+            <TextView
+                android:id="@+id/radicand_none"
+                android:layout_width="32dp"
+                android:layout_height="42dp"
+                android:background="@drawable/shape_dotted_stroke" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="40dp"
+            android:layout_alignRight="@+id/radicand_root"
+            android:background="@color/black"/>
+
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--屏幕底部的dialog-->
+    <style name="MathBottomDialog">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <!-- Dialog进入及退出动画 -->
+        <item name="android:windowAnimationStyle">@style/MathBottomToTopAnim</item>
+    </style>
+
+    <style name="MathBottomToTopAnim" parent="android:Animation">
+        <item name="@android:windowEnterAnimation">@anim/bottom_view_anim_enter</item>
+        <item name="@android:windowExitAnimation">@anim/bottom_view_anim_exit</item>
+    </style>
+
+</resources>

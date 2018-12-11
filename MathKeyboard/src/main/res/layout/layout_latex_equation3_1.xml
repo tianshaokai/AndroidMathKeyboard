@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/llyEquationRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="5dp"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/tvBrace"
+            android:layout_width="20dp"
+            android:layout_height="60dp"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:textSize="50sp"
+            android:text="{"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_toRightOf="@id/tvBrace"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="8dp">
+
+            <LinearLayout
+                android:id="@+id/llyEquation1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/tvEquation1"
+                    android:layout_width="20dp"
+                    android:layout_height="28dp"
+                    android:gravity="center"
+                    android:background="@drawable/shape_dotted_stroke"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llyEquation2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/tvEquation2"
+                    android:layout_width="20dp"
+                    android:layout_height="28dp"
+                    android:background="@drawable/shape_dotted_stroke"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llyEquation3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/tvEquation3"
+                    android:layout_width="20dp"
+                    android:layout_height="28dp"
+                    android:background="@drawable/shape_dotted_stroke"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

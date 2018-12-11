@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="TYTextView">
+        <attr name="borderDir"/>
+        <attr name="TYBorderWidth"/>
+    </declare-styleable>
+</resources>
