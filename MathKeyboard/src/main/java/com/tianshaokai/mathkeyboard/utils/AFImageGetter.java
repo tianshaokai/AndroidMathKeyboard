@@ -20,10 +20,6 @@ import java.net.URL;
 import java.util.HashMap;
 import java.util.logging.Logger;
 
-/**
- * Created by Xubin on 2017/7/4.
- */
-
 public class AFImageGetter implements Html.ImageGetter {
 
     private final String TAG = "wdcloud";

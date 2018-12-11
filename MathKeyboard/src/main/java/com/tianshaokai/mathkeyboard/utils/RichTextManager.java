@@ -4,10 +4,6 @@ import java.util.HashMap;
 import cn.wdcloud.afframework.component.RichText;
 import cn.wdcloud.aflibraries.utils.Logger;
 
-/**
- * Created by Xubin on 2017/8/25.
- */
-
 public class RichTextManager {
 
     private static final HashMap<String,HashMap<String,RichText>> instances = new HashMap<>();

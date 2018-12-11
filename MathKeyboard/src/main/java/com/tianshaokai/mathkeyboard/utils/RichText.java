@@ -10,9 +10,6 @@ import android.widget.TextView;
 import java.util.HashMap;
 import java.util.logging.Logger;
 
-/**
- * Created by Administrator on 2016/9/23.
- */
 public class RichText {
     private static final String TAG = "RichText";
     private String richText;                // 富文本数据

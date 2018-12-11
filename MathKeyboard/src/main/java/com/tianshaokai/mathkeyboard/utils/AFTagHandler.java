@@ -26,9 +26,6 @@ import java.util.Map;
 
 import cn.wdcloud.afframework.component.RichText;
 
-/**
- * Created by Xubin on 2017/7/4.
- */
 
 public class AFTagHandler implements Html.TagHandler {
 
