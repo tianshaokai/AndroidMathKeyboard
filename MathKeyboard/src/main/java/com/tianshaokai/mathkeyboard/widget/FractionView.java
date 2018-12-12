@@ -19,7 +19,7 @@ import java.util.logging.Logger;
  */
 
 public class FractionView extends FormulaView {
-    private static final String TAG = "AbsoluteValueView";
+    private static final String TAG = "FractionView";
     private LinearLayout ll_Root, ll_NumeratorRoot, ll_DenominatorRoot;
 
     public FractionView(Context context, int level) {

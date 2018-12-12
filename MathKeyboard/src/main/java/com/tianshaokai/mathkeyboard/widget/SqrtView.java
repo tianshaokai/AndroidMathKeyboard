@@ -16,7 +16,7 @@ import com.tianshaokai.mathkeyboard.manager.View2Latex;
  */
 
 public class SqrtView extends FormulaView {
-    private static final String TAG = "AbsoluteValueView";
+    private static final String TAG = "SqrtView";
     private LinearLayout ll_SqrtRoot,ll_MultipleRoot,ll_RadicandRoot;
 
     public SqrtView(Context context, int level) {

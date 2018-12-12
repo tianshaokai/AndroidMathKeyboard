@@ -1,6 +1,5 @@
 package com.tianshaokai.mathkeyboard.utils;
 
-import android.app.DownloadManager;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
@@ -11,18 +10,12 @@ import android.text.TextUtils;
 import android.util.Log;
 import android.widget.TextView;
 
-import com.bumptech.glide.Glide;
-import com.bumptech.glide.request.target.SimpleTarget;
-import com.tianshaokai.mathkeyboard.R;
-
 import java.io.File;
-import java.net.URL;
 import java.util.HashMap;
-import java.util.logging.Logger;
 
 public class AFImageGetter implements Html.ImageGetter {
 
-    private final String TAG = "wdcloud";
+    private final String TAG = "AFImageGetter";
     private URLDrawable urlDrawable = null;
     private TextView textView;
     private Context context;
@@ -50,7 +43,7 @@ public class AFImageGetter implements Html.ImageGetter {
         this.imageMap = imageMap;
         this.callback = callback;
         this.isDownload = isDownload;
-        maxWidth = ScreenUtils.getScreenWidth(context) - margin;
+        maxWidth = DisplayUtils.getScreenWidth(context) - margin;
         if (r != null) {
             isRefresh = false;
             count = 0;
@@ -66,10 +59,10 @@ public class AFImageGetter implements Html.ImageGetter {
             if (!source.startsWith("http")){
                 boolean is2Px = false;
                 if (source.matches("data:image.*base64.*")) {
-                    Logger.getLogger().d("--->加载base64图片：" + source);
+                    Log.d(TAG, "--->加载base64图片：" + source);
                     is2Px = true;
                 }else {
-//                    Logger.getLogger().d("--->加载的地址为本地图片：" + source);
+//                    Log.d(TAG,"--->加载的地址为本地图片：" + source);
                     is2Px = false;
                 }
                 loadLocalBitmap(source, source, is2Px);
@@ -105,7 +98,7 @@ public class AFImageGetter implements Html.ImageGetter {
                         callback = new AFCallback<String>() {
                             @Override
                             public void onStart(String uuid) {
-                                Logger.getLogger().d("开始缓冲" + path + "/" + filename);
+                                Log.d(TAG,"开始缓冲" + path + "/" + filename);
                             }
 
                             @Override
@@ -115,7 +108,7 @@ public class AFImageGetter implements Html.ImageGetter {
 
                             @Override
                             public void onSuccess(String s) {
-                                Logger.getLogger().d("下载完成" + path + "/" + filename);
+                                Log.d(TAG,"下载完成" + path + "/" + filename);
                                 count++;
                                 if(count == imgTagCount && null != r){
                                     r.refresh();
@@ -125,7 +118,7 @@ public class AFImageGetter implements Html.ImageGetter {
 
                             @Override
                             public void onFailed(String s) {
-                                Logger.getLogger().e("下载失败");
+                                Log.e(TAG,"下载失败");
                                 try {
                                     file.delete();
                                 } catch (Exception e) {
@@ -134,7 +127,7 @@ public class AFImageGetter implements Html.ImageGetter {
                             }
                         };
                     }
-                    DownloadManager.getInstance().download(context,new URL(source), fullPath, callback);
+//                    DownloadManager.getInstance().download(context,new URL(source), fullPath, callback);
                 }
             } else {
                 loadByGlide(source,false);
@@ -151,37 +144,37 @@ public class AFImageGetter implements Html.ImageGetter {
      */
     private void loadByGlide(final String source, final boolean is2Px){
         if (null != context) {
-            Glide.with(context.getApplicationContext()).load(source).asBitmap().fitCenter().into(new SimpleTarget<Bitmap>() {
-                @Override
-                public void onResourceReady(Bitmap resource, GlideAnimation<? super Bitmap> glideAnimation) {
-                    if (null != imageMap) {
-                        String widthHeight = imageMap.get(source);
-                        if (!TextUtils.isEmpty(widthHeight)) {
-                            String[] whArray = widthHeight.split(",");
-                            if (null != whArray && whArray.length == 2 &&
-                                    !TextUtils.isEmpty(whArray[0]) && !TextUtils.isEmpty(whArray[1])) {
-                                // 获得图片的宽高
-                                int newWidth = PixelUtil.dip2px(context, Float.parseFloat(whArray[0]));
-                                int newHeight = PixelUtil.dip2px(context, Float.parseFloat(whArray[1]));
-                                // 得到新的图片
-                                if (newWidth > maxWidth) {
-                                    newWidth = maxWidth;
-                                }
-                                urlDrawable.bitmap = BitmapUtil.scaleImage(resource, newWidth, newHeight);
-                                setTextBitmap(source, urlDrawable.bitmap);
-                            } else {
-                                getBitmap(source, is2Px, resource);
-                            }
-                        } else {
-                            getBitmap(source, is2Px, resource);
-                        }
-                    } else {
-                        getBitmap(source, is2Px, resource);
-                    }
-                }
-            });
+//            Glide.with(context.getApplicationContext()).load(source).asBitmap().fitCenter().into(new SimpleTarget<Bitmap>() {
+//                @Override
+//                public void onResourceReady(Bitmap resource, GlideAnimation<? super Bitmap> glideAnimation) {
+//                    if (null != imageMap) {
+//                        String widthHeight = imageMap.get(source);
+//                        if (!TextUtils.isEmpty(widthHeight)) {
+//                            String[] whArray = widthHeight.split(",");
+//                            if (null != whArray && whArray.length == 2 &&
+//                                    !TextUtils.isEmpty(whArray[0]) && !TextUtils.isEmpty(whArray[1])) {
+//                                // 获得图片的宽高
+//                                int newWidth = PixelUtil.dip2px(context, Float.parseFloat(whArray[0]));
+//                                int newHeight = PixelUtil.dip2px(context, Float.parseFloat(whArray[1]));
+//                                // 得到新的图片
+//                                if (newWidth > maxWidth) {
+//                                    newWidth = maxWidth;
+//                                }
+//                                urlDrawable.bitmap = BitmapUtil.scaleImage(resource, newWidth, newHeight);
+//                                setTextBitmap(source, urlDrawable.bitmap);
+//                            } else {
+//                                getBitmap(source, is2Px, resource);
+//                            }
+//                        } else {
+//                            getBitmap(source, is2Px, resource);
+//                        }
+//                    } else {
+//                        getBitmap(source, is2Px, resource);
+//                    }
+//                }
+//            });
         } else {
-//            Logger.getLogger().e("——context为空");
+//            Log.e(TAG,"——context为空");
         }
     }
 
@@ -189,13 +182,13 @@ public class AFImageGetter implements Html.ImageGetter {
      * 加载默认图片
      */
     private void loadDefaultBitmap(){
-        if (defaultBitmap == null){
-            defaultBitmap = BitmapUtil.loadBitmap(context, R.drawable.default_image,100,100);
-        }
-        urlDrawable.bitmap = defaultBitmap;
-        urlDrawable.setBounds(0, 0, urlDrawable.bitmap.getWidth(), urlDrawable.bitmap.getHeight());
-        textView.invalidate();
-        textView.setText(textView.getText());//不加这句显示不出来图片，原因不详
+//        if (defaultBitmap == null){
+//            defaultBitmap = BitmapUtil.loadBitmap(context, R.drawable.default_image,100,100);
+//        }
+//        urlDrawable.bitmap = defaultBitmap;
+//        urlDrawable.setBounds(0, 0, urlDrawable.bitmap.getWidth(), urlDrawable.bitmap.getHeight());
+//        textView.invalidate();
+//        textView.setText(textView.getText());//不加这句显示不出来图片，原因不详
     }
 
     /**
@@ -212,8 +205,8 @@ public class AFImageGetter implements Html.ImageGetter {
                 String[] whArray = widthHeight.split(",");
                 if (null != whArray && whArray.length == 2 &&
                         !TextUtils.isEmpty(whArray[0]) && !TextUtils.isEmpty(whArray[1])) {
-                    int newWidth = PixelUtil.dip2px(context, Float.parseFloat(whArray[0]));
-                    int newHeight = PixelUtil.dip2px(context, Float.parseFloat(whArray[1]));
+                    int newWidth = DisplayUtils.dp2px(context, Float.parseFloat(whArray[0]));
+                    int newHeight = DisplayUtils.dp2px(context, Float.parseFloat(whArray[1]));
                     // 得到新的图片
                     if (newWidth > maxWidth) {
                         newWidth = maxWidth;
@@ -233,11 +226,11 @@ public class AFImageGetter implements Html.ImageGetter {
 
     private void getBitmap(String source, boolean is2Px, Bitmap originBitmap) {
         if (is2Px) {
-            int bmWidth = PixelUtil.dip2px(context, originBitmap.getWidth());
+            int bmWidth = DisplayUtils.dp2px(context, originBitmap.getWidth());
             if (bmWidth > maxWidth) {
                 bmWidth = maxWidth;
             }
-            urlDrawable.bitmap = BitmapUtil.scaleImage(originBitmap, bmWidth, PixelUtil.dip2px(context, originBitmap.getHeight()));
+            urlDrawable.bitmap = BitmapUtil.scaleImage(originBitmap, bmWidth, DisplayUtils.dp2px(context, originBitmap.getHeight()));
         }else {
             int bmWidth = originBitmap.getWidth();
             if (bmWidth > maxWidth) {
@@ -303,13 +296,13 @@ public class AFImageGetter implements Html.ImageGetter {
             bitmapMap.clear();
             bitmapMap = null;
         }else {
-//            Logger.getLogger().d("recycleBitmapMap--->bitmap集合为空");
+//            Log.d(TAG,"recycleBitmapMap--->bitmap集合为空");
         }
     }
 
     private void addBitmap(String key,Bitmap bitmap){
         if (bitmap == null){
-//            Logger.getLogger().e("--->bitmap为空，不添加");
+//            Log.e(TAG,"--->bitmap为空，不添加");
             return;
         }
         if (bitmapMap == null){

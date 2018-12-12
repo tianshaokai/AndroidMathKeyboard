@@ -24,8 +24,6 @@ import java.util.HashMap;
 import java.util.Locale;
 import java.util.Map;
 
-import cn.wdcloud.afframework.component.RichText;
-
 
 public class AFTagHandler implements Html.TagHandler {
 

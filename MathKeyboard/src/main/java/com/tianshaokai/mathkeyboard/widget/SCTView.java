@@ -14,7 +14,7 @@ import com.tianshaokai.mathkeyboard.manager.ConvertResult;
  * 正弦函数
  */
 public class SCTView extends FormulaView {
-    private static final String TAG = "AbsoluteValueView";
+    private static final String TAG = "SCTView";
     private TextView tvSCT;
     private LinearLayout ll_Sine_Root, ll_Sine_None_Root;
 

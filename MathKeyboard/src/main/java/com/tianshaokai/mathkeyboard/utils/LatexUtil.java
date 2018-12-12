@@ -1,6 +1,5 @@
 package com.tianshaokai.mathkeyboard.utils;
 
-import android.arch.lifecycle.Observer;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
@@ -14,8 +13,6 @@ import com.tianshaokai.jlatexmath.core.TeXConstants;
 import com.tianshaokai.jlatexmath.core.TeXFormula;
 import com.tianshaokai.jlatexmath.core.TeXIcon;
 
-import org.reactivestreams.Subscriber;
-
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
@@ -24,8 +21,6 @@ import java.io.UnsupportedEncodingException;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 
-import io.reactivex.Observable;
-import io.reactivex.schedulers.Schedulers;
 
 public class LatexUtil {
 
@@ -51,37 +46,37 @@ public class LatexUtil {
 
     public static void asyncAnalysisLatex(final Context context, final String latexContent, final int textSize,final int margin, final LatexCallback callback){
 
-        Observable.create(new Observable.OnSubscribe<String>() {
-            @Override
-            public void call(Subscriber<? super String> subscriber) {
-                String content = LatexUtil.analysisLatex(context, latexContent,textSize,margin);
-                subscriber.onNext(content);
-                subscriber.onCompleted();
-            }
-        })
-                .subscribeOn(Schedulers.io()) // 指定 subscribe() 发生在 IO 线程
-                .observeOn(AndroidSchedulers.mainThread()) // 指定 Subscriber 的回调发生在主线程
-                .subscribe(new Observer<String>() {
-                    @Override
-                    public void onNext(String content) {
-                        if (null != callback){
-                            callback.onAnalysisLatex(content);
-                        }
-                    }
-
-                    @Override
-                    public void onCompleted() {
-
-                    }
-
-                    @Override
-                    public void onError(Throwable e) {
-                        e.printStackTrace();
-                        if (null != callback){
-                            callback.onError(e.getMessage());
-                        }
-                    }
-                });
+//        Observable.create(new Observable.OnSubscribe<String>() {
+//            @Override
+//            public void call(Subscriber<? super String> subscriber) {
+//                String content = LatexUtil.analysisLatex(context, latexContent,textSize,margin);
+//                subscriber.onNext(content);
+//                subscriber.onCompleted();
+//            }
+//        })
+//                .subscribeOn(Schedulers.io()) // 指定 subscribe() 发生在 IO 线程
+//                .observeOn(AndroidSchedulers.mainThread()) // 指定 Subscriber 的回调发生在主线程
+//                .subscribe(new Observer<String>() {
+//                    @Override
+//                    public void onNext(String content) {
+//                        if (null != callback){
+//                            callback.onAnalysisLatex(content);
+//                        }
+//                    }
+//
+//                    @Override
+//                    public void onCompleted() {
+//
+//                    }
+//
+//                    @Override
+//                    public void onError(Throwable e) {
+//                        e.printStackTrace();
+//                        if (null != callback){
+//                            callback.onError(e.getMessage());
+//                        }
+//                    }
+//                });
     }
 
     public static synchronized String analysisLatex(Context context, String latexContent) {

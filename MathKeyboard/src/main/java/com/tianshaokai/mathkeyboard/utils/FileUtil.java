@@ -369,7 +369,7 @@ public class FileUtil {
         int column_index = cursor.getColumnIndexOrThrow("_data");
         if (cursor.moveToFirst()) {
             imagePath = cursor.getString(column_index);
-            logger.e(imagePath);
+            Log.e(TAG, imagePath);
         }
         return imagePath;
     }

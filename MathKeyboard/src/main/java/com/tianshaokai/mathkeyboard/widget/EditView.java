@@ -11,7 +11,7 @@ import android.util.Log;
  */
 
 public class EditView extends FormulaView {
-    private static final String TAG = "AbsoluteValueView";
+    private static final String TAG = "EditView";
     public EditView(Context context) {
         super(context, 1);
         initView();

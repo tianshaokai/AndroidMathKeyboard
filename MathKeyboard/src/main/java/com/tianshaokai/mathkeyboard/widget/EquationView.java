@@ -12,7 +12,7 @@ import com.tianshaokai.mathkeyboard.manager.ConvertResult;
 import com.tianshaokai.mathkeyboard.manager.LatexConstant;
 
 public class EquationView extends FormulaView {
-    private static final String TAG = "AbsoluteValueView";
+    private static final String TAG = "EquationView";
     private LinearLayout llyEquationRoot, llyEquation1, llyEquation2;
 
     public EquationView(Context context, int level) {
