@@ -11,7 +11,7 @@
         android:layout_height="50dp"
         android:orientation="horizontal">
 
-        <cn.wdcloud.appsupport.latex.widget.BorderTextView
+        <com.tianshaokai.mathkeyboard.widget.BorderTextView
             android:id="@+id/tvAngle"
             android:layout_width="0dp"
             android:layout_height="match_parent"
@@ -22,7 +22,7 @@
             customview:TYBorderWidth="1"
             customview:borderDir="LEFT,RIGHT,BOTTOM" />
 
-        <cn.wdcloud.appsupport.latex.widget.BorderTextView
+        <com.tianshaokai.mathkeyboard.widget.BorderTextView
             android:id="@+id/tvTriangle"
             android:layout_width="0dp"
             android:layout_height="match_parent"
@@ -33,7 +33,7 @@
             customview:TYBorderWidth="1"
             customview:borderDir="RIGHT,BOTTOM" />
 
-        <cn.wdcloud.appsupport.latex.widget.BorderTextView
+        <com.tianshaokai.mathkeyboard.widget.BorderTextView
             android:id="@+id/tvCong"
             android:layout_width="0dp"
             android:layout_height="match_parent"
@@ -44,7 +44,7 @@
             customview:TYBorderWidth="1"
             customview:borderDir="RIGHT,BOTTOM" />
 
-        <cn.wdcloud.appsupport.latex.widget.BorderTextView
+        <com.tianshaokai.mathkeyboard.widget.BorderTextView
             android:id="@+id/tvSim"
             android:layout_width="0dp"
             android:layout_height="match_parent"
@@ -55,7 +55,7 @@
             customview:TYBorderWidth="1"
             customview:borderDir="RIGHT,BOTTOM" />
 
-        <cn.wdcloud.appsupport.latex.widget.BorderTextView
+        <com.tianshaokai.mathkeyboard.widget.BorderTextView
             android:id="@+id/ivDelete3"
             android:layout_width="0dp"
             android:layout_height="match_parent"
@@ -72,7 +72,7 @@
         android:layout_height="50dp"
         android:orientation="horizontal">
 
-        <cn.wdcloud.appsupport.latex.widget.BorderTextView
+        <com.tianshaokai.mathkeyboard.widget.BorderTextView
             android:id="@+id/tvSine"
             android:layout_width="0dp"
             android:layout_height="match_parent"
@@ -83,7 +83,7 @@
             customview:TYBorderWidth="1"
             customview:borderDir="LEFT,RIGHT,BOTTOM" />
 
-        <cn.wdcloud.appsupport.latex.widget.BorderTextView
+        <com.tianshaokai.mathkeyboard.widget.BorderTextView
             android:id="@+id/tvCosine"
             android:layout_width="0dp"
             android:layout_height="match_parent"
@@ -94,7 +94,7 @@
             customview:TYBorderWidth="1"
             customview:borderDir="RIGHT,BOTTOM" />
 
-        <cn.wdcloud.appsupport.latex.widget.BorderTextView
+        <com.tianshaokai.mathkeyboard.widget.BorderTextView
             android:id="@+id/tvTangent"
             android:layout_width="0dp"
             android:layout_height="match_parent"
@@ -105,7 +105,7 @@
             customview:TYBorderWidth="1"
             customview:borderDir="RIGHT,BOTTOM" />
 
-        <cn.wdcloud.appsupport.latex.widget.BorderTextView
+        <com.tianshaokai.mathkeyboard.widget.BorderTextView
             android:id="@+id/tvPi"
             android:layout_width="0dp"
             android:layout_height="match_parent"
@@ -116,7 +116,7 @@
             customview:TYBorderWidth="1"
             customview:borderDir="RIGHT,BOTTOM" />
 
-        <cn.wdcloud.appsupport.latex.widget.BorderTextView
+        <com.tianshaokai.mathkeyboard.widget.BorderTextView
             android:id="@+id/tvPiR2"
             android:layout_width="0dp"
             android:layout_height="match_parent"
@@ -133,7 +133,7 @@
         android:layout_height="50dp"
         android:orientation="horizontal">
 
-        <cn.wdcloud.appsupport.latex.widget.BorderTextView
+        <com.tianshaokai.mathkeyboard.widget.BorderTextView
             android:id="@+id/tvAlpha"
             android:layout_width="0dp"
             android:layout_height="match_parent"
@@ -144,7 +144,7 @@
             customview:TYBorderWidth="1"
             customview:borderDir="RIGHT,BOTTOM" />
 
-        <cn.wdcloud.appsupport.latex.widget.BorderTextView
+        <com.tianshaokai.mathkeyboard.widget.BorderTextView
             android:id="@+id/tvBeta"
             android:layout_width="0dp"
             android:layout_height="match_parent"
@@ -155,7 +155,7 @@
             customview:TYBorderWidth="1"
             customview:borderDir="RIGHT,BOTTOM" />
 
-        <cn.wdcloud.appsupport.latex.widget.BorderTextView
+        <com.tianshaokai.mathkeyboard.widget.BorderTextView
             android:id="@+id/tvTheta"
             android:layout_width="0dp"
             android:layout_height="match_parent"
@@ -166,7 +166,7 @@
             customview:TYBorderWidth="1"
             customview:borderDir="RIGHT,BOTTOM" />
 
-        <cn.wdcloud.appsupport.latex.widget.BorderTextView
+        <com.tianshaokai.mathkeyboard.widget.BorderTextView
             android:id="@+id/tvDelta"
             android:layout_width="0dp"
             android:layout_height="match_parent"
@@ -177,7 +177,7 @@
             customview:TYBorderWidth="1"
             customview:borderDir="RIGHT,BOTTOM" />
 
-        <cn.wdcloud.appsupport.latex.widget.BorderTextView
+        <com.tianshaokai.mathkeyboard.widget.BorderTextView
             android:id="@+id/tvApprox"
             android:layout_width="0dp"
             android:layout_height="match_parent"
@@ -194,7 +194,7 @@
         android:layout_height="50dp"
         android:orientation="horizontal">
 
-        <cn.wdcloud.appsupport.latex.widget.BorderTextView
+        <com.tianshaokai.mathkeyboard.widget.BorderTextView
             android:id="@+id/ivCirc"
             android:layout_width="0dp"
             android:layout_height="match_parent"
@@ -204,7 +204,7 @@
             android:textSize="28sp"
             android:text="&#xe685;"/>
 
-        <cn.wdcloud.appsupport.latex.widget.BorderTextView
+        <com.tianshaokai.mathkeyboard.widget.BorderTextView
             android:id="@+id/ivMinute"
             android:layout_width="0dp"
             android:layout_height="match_parent"
@@ -214,7 +214,7 @@
             android:textSize="28sp"
             android:text="&#xe688;"/>
 
-        <cn.wdcloud.appsupport.latex.widget.BorderTextView
+        <com.tianshaokai.mathkeyboard.widget.BorderTextView
             android:id="@+id/ivSecond"
             android:layout_width="0dp"
             android:layout_height="match_parent"
@@ -225,7 +225,7 @@
             android:textSize="28sp"
             android:text="&#xe686;"/>
 
-        <cn.wdcloud.appsupport.latex.widget.BorderTextView
+        <com.tianshaokai.mathkeyboard.widget.BorderTextView
             android:id="@+id/tvPerp"
             android:layout_width="0dp"
             android:layout_height="match_parent"
@@ -236,7 +236,7 @@
             customview:TYBorderWidth="1"
             customview:borderDir="RIGHT,BOTTOM" />
 
-        <cn.wdcloud.appsupport.latex.widget.BorderTextView
+        <com.tianshaokai.mathkeyboard.widget.BorderTextView
             android:id="@+id/tvDoubleLine"
             android:layout_width="0dp"
             android:layout_height="match_parent"
@@ -253,7 +253,7 @@
         android:layout_height="50dp"
         android:orientation="horizontal">
 
-        <cn.wdcloud.appsupport.latex.widget.BorderTextView
+        <com.tianshaokai.mathkeyboard.widget.BorderTextView
             android:id="@+id/tvCircle"
             android:layout_width="0dp"
             android:layout_height="match_parent"
@@ -264,7 +264,7 @@
             customview:TYBorderWidth="1"
             customview:borderDir="LEFT,RIGHT" />
 
-        <cn.wdcloud.appsupport.latex.widget.BorderTextView
+        <com.tianshaokai.mathkeyboard.widget.BorderTextView
             android:id="@+id/tvArc"
             android:layout_width="0dp"
             android:layout_height="match_parent"
@@ -275,7 +275,7 @@
             customview:TYBorderWidth="1"
             customview:borderDir="RIGHT" />
 
-        <cn.wdcloud.appsupport.latex.widget.BorderTextView
+        <com.tianshaokai.mathkeyboard.widget.BorderTextView
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -285,7 +285,7 @@
             customview:TYBorderWidth="1"
             customview:borderDir="RIGHT" />
 
-        <cn.wdcloud.appsupport.latex.widget.BorderTextView
+        <com.tianshaokai.mathkeyboard.widget.BorderTextView
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -295,7 +295,7 @@
             customview:TYBorderWidth="1"
             customview:borderDir="RIGHT" />
 
-        <cn.wdcloud.appsupport.latex.widget.BorderTextView
+        <com.tianshaokai.mathkeyboard.widget.BorderTextView
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"

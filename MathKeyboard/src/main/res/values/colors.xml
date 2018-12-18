@@ -6,5 +6,9 @@
 
     <color name="colorBorder">#dbdbdb</color>
 
+    <color name="white">#FFFFFF</color>
     <color name="black">#000000</color>
+
+    <color name="colorBackground_select">#ffffff</color>
+    <color name="colorBackground_normal">#e6e6e6</color>
 </resources>

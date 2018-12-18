@@ -13,4 +13,11 @@
         <item name="@android:windowExitAnimation">@anim/bottom_view_anim_exit</item>
     </style>
 
+    <style name="btnLatterKeyboard">
+        <item name="android:background">@drawable/btn_latter_keyboard_bg</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_marginLeft">2dp</item>
+        <item name="android:layout_marginRight">2dp</item>
+    </style>
+
 </resources>
