@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:state_pressed="true">
+        <!-- layer-list设置图层效果：每一个item是一张图层，从下往上叠放 -->
+        <layer-list>
+            <item>
+                <shape android:shape="rectangle" >
+                    <gradient
+                        android:angle="270"
+                        android:endColor="#E0E0E0"
+                        android:startColor="#E0E0E0"/>
+
+                    <corners
+                        android:bottomLeftRadius="6dip"
+                        android:bottomRightRadius="6dip"
+                        android:topLeftRadius="6dip"
+                        android:topRightRadius="6dip" />
+                </shape>
+            </item>
+
+            <item android:top="3dp">
+                <shape android:shape="rectangle" >
+                    <gradient
+                        android:angle="270"
+                        android:endColor="#0F000000"
+                        android:startColor="#0F000000"/>
+
+                    <corners
+                        android:bottomLeftRadius="6dip"
+                        android:bottomRightRadius="6dip"
+                        android:topLeftRadius="6dip"
+                        android:topRightRadius="6dip" />
+                </shape>
+            </item>
+
+        </layer-list>
+    </item>
+
+    <item>
+        <!-- layer-list设置图层效果：每一个item是一张图层，从下往上叠放 -->
+        <layer-list>
+            <item>
+                <shape android:shape="rectangle" >
+                    <gradient
+                        android:angle="270"
+                        android:endColor="#0F000000"
+                        android:startColor="#0F000000" />
+
+                    <corners
+                        android:bottomLeftRadius="6dip"
+                        android:bottomRightRadius="6dip"
+                        android:topLeftRadius="6dip"
+                        android:topRightRadius="6dip" />
+                </shape>
+            </item>
+            <item
+                android:bottom="3dp">
+                <shape android:shape="rectangle" >
+                    <gradient
+                        android:angle="270"
+                        android:endColor="#FFFFFF"
+                        android:startColor="#FFFFFF" />
+
+                    <corners
+                        android:bottomLeftRadius="6dip"
+                        android:bottomRightRadius="6dip"
+                        android:topLeftRadius="6dip"
+                        android:topRightRadius="6dip" />
+                </shape>
+            </item>
+
+        </layer-list>
+    </item>
+
+</selector>
+

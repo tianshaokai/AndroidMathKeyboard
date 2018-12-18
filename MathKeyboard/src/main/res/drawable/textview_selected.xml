@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 带圆角 白色背景 灰色边框 长方体 -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape>
+            <solid android:color="@color/colorBorder" />
+        </shape>
+    </item>
+    <item
+        android:bottom="1px"
+        >
+        <shape>
+            <solid android:color="@color/colorBackground_select" />
+        </shape>
+    </item>
+</layer-list>
