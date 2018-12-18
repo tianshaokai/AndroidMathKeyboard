@@ -14,28 +14,4 @@
         android:layout_width="match_parent"
         android:layout_height="200dp"
         android:textSize="15sp"/>
-
-    <HorizontalScrollView
-        android:id="@+id/ScrollView2"
-        android:layout_width="fill_parent"
-        android:layout_height="200px"
-        android:layout_marginBottom="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="10dp"
-        android:layout_marginTop="10dp"
-        android:visibility="gone">
-
-
-        <TextView
-            android:id="@+id/tvContent"
-            android:layout_width="match_parent"
-            android:layout_height="190px"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="7dp"
-            android:maxLines="1"
-            android:gravity="top|left"
-            android:textSize="40sp"
-            android:text="">
-        </TextView>
-    </HorizontalScrollView>
 </LinearLayout>

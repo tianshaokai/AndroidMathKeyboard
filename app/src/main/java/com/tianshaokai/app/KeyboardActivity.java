@@ -49,6 +49,8 @@ public class KeyboardActivity extends AppCompatActivity {
             if (i != PackageManager.PERMISSION_GRANTED) {
                 // 如果没有授予该权限，就去提示用户请求
                 ActivityCompat.requestPermissions(this, storagePermission, 100);
+            } else {
+                LatexUtil.init(this);
             }
         }
     }
