@@ -52,6 +52,8 @@ public class KeyboardActivity extends AppCompatActivity {
             } else {
                 LatexUtil.init(this);
             }
+        } else {
+            LatexUtil.init(this);
         }
     }
 

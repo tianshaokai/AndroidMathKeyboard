@@ -7,7 +7,7 @@ android {
 
     defaultConfig {
         applicationId "com.tianshaokai.mathkeyboard"
-        minSdkVersion 23
+        minSdkVersion 19
         targetSdkVersion 28
         versionCode time.intValue()
         versionName "1.0"
