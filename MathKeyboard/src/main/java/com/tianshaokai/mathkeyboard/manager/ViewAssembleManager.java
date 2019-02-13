@@ -8,14 +8,13 @@ import android.view.ViewGroup;
 import android.widget.HorizontalScrollView;
 import android.widget.TextView;
 
-import java.util.HashMap;
-import java.util.Map;
-import java.util.logging.Logger;
-
 import com.tianshaokai.mathkeyboard.widget.EditView;
 import com.tianshaokai.mathkeyboard.widget.FormulaView;
 import com.tianshaokai.mathkeyboard.widget.LineView;
 import com.tianshaokai.mathkeyboard.widget.SimpleSymbolView;
+
+import java.util.HashMap;
+import java.util.Map;
 
 
 /**
@@ -288,7 +287,7 @@ public class ViewAssembleManager {
     }
 
     //删除已存在的竖线
-    public void deleteLine() {
+    private void deleteLine() {
         //如果已经存在，则删除
         if (formulaViews.containsKey(LineView.class.getSimpleName())) {
             FormulaView formulaView = formulaViews.remove(LineView.class.getSimpleName());
