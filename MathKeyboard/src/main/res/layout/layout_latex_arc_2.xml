@@ -6,7 +6,7 @@
     android:layout_marginLeft="5dp"
     android:orientation="vertical">
 
-    <cn.wdcloud.appsupport.latex.widget.MyArcView
+    <com.tianshaokai.mathkeyboard.widget.MyArcView
         android:layout_width="35dp"
         android:layout_height="25dp"
         android:layout_gravity="center_horizontal"/>
