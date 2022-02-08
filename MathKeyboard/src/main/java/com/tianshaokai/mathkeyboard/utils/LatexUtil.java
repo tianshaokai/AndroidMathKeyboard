@@ -4,7 +4,9 @@ import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
 import android.graphics.Color;
+import android.net.Uri;
 import android.os.Environment;
+import android.support.v4.content.FileProvider;
 import android.text.TextUtils;
 
 import com.tianshaokai.jlatexmath.core.AjLatexMath;
@@ -20,31 +22,31 @@ import java.io.IOException;
 import java.io.UnsupportedEncodingException;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
+import java.util.logging.Logger;
 
 
 public class LatexUtil {
 
     public static String latexSavePath = "";
 
-    public static void init(Context context){
-        latexSavePath = Environment.getExternalStorageDirectory() + "/Android/data/"
-                + context.getPackageName() + "/files/latex/";
-        File file = new File(latexSavePath);
-        if (!file.exists()){
+    public static void init(Context context) {
+        latexSavePath = "/files/latex";
+        File file = new File(context.getExternalFilesDir(Environment.DIRECTORY_PICTURES), latexSavePath);
+        if (!file.exists()) {
             file.mkdirs();
         }
         AjLatexMath.init(context);
     }
 
-    public static void asyncAnalysisLatex(final Context context, final String latexContent, final LatexCallback callback){
-        asyncAnalysisLatex(context, latexContent, 16,150,callback);
+    public static void asyncAnalysisLatex(final Context context, final String latexContent, final LatexCallback callback) {
+        asyncAnalysisLatex(context, latexContent, 16, 150, callback);
     }
 
-    public static void asyncAnalysisLatex(final Context context, final String latexContent,final int margin, final LatexCallback callback){
-        asyncAnalysisLatex(context, latexContent, 16,margin,callback);
+    public static void asyncAnalysisLatex(final Context context, final String latexContent, final int margin, final LatexCallback callback) {
+        asyncAnalysisLatex(context, latexContent, 16, margin, callback);
     }
 
-    public static void asyncAnalysisLatex(final Context context, final String latexContent, final int textSize,final int margin, final LatexCallback callback){
+    public static void asyncAnalysisLatex(final Context context, final String latexContent, final int textSize, final int margin, final LatexCallback callback) {
 
 //        Observable.create(new Observable.OnSubscribe<String>() {
 //            @Override
@@ -80,14 +82,14 @@ public class LatexUtil {
     }
 
     public static synchronized String analysisLatex(Context context, String latexContent) {
-        return analysisLatex(context, latexContent,16,200);
+        return analysisLatex(context, latexContent, 16, 200);
     }
 
-    public static synchronized String analysisLatex(Context context, String latexContent,int margin) {
-        return analysisLatex(context, latexContent,16,margin);
+    public static synchronized String analysisLatex(Context context, String latexContent, int margin) {
+        return analysisLatex(context, latexContent, 16, margin);
     }
 
-    public static synchronized String analysisLatex(Context context,String latexContent,int textSize,int margin){
+    public static synchronized String analysisLatex(Context context, String latexContent, int textSize, int margin) {
         String mLatexContent = latexContent;
 
         if (latexContent.contains("$")) {
@@ -124,23 +126,25 @@ public class LatexUtil {
         return mLatexContent;
     }
 
-    private static String createImgTag(Context context, String latex, boolean isLeft,int textSize,int margin) {
-        File file = new File(latexSavePath);
-        if (!file.exists()) {
-            file.mkdirs();
+    private static String createImgTag(Context context, String latex, boolean isLeft, int textSize, int margin) {
+        File directory = new File(context.getExternalFilesDir(Environment.DIRECTORY_PICTURES), latexSavePath);
+        if (!directory.exists()) {
+            directory.mkdirs();
         }
 
 //        String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmssSSS").format(new Date());
 //        String filePath = latexSavePath + "IMG_" + timeStamp + ".png";
         String fileName = stringToMD5(latex) + ".png";
-        String filePath = latexSavePath + fileName;
+        String filePath = latexSavePath + "/" + fileName;
 //        Logger.getLogger().d("--->filePath：" + filePath);
-        String imgTag = "<img src='" + filePath + "' />";
-        if (new File(filePath).exists()){
+        File file = new File(context.getExternalFilesDir(Environment.DIRECTORY_PICTURES), filePath);
+        String imgTag = "<img src='" + file.getAbsolutePath() + "' />";
+        if (file.exists()) {
             return imgTag;
         }
         try {
-            saveBitmap(context, latex, new File(filePath), isLeft,textSize,margin);
+            String absolutePath = saveBitmap(context, latex, file, isLeft, textSize, margin);
+            imgTag = "<img src='" + absolutePath + "' />";
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -148,7 +152,7 @@ public class LatexUtil {
         return imgTag;
     }
 
-    private static void saveBitmap(Context context, String teX, File file, boolean isLeft,int textSize,int margin) {
+    private static String saveBitmap(Context context, String teX, File file, boolean isLeft, int textSize, int margin) {
         int w = context.getResources().getDisplayMetrics().widthPixels;
         int h = context.getResources().getDisplayMetrics().heightPixels;
         int align = TeXConstants.ALIGN_LEFT;
@@ -173,7 +177,8 @@ public class LatexUtil {
         icon.paintIcon(g2, 0, 0);
         FileOutputStream fos = null;
         try {
-            fos = new FileOutputStream(file);
+            Uri copyUri = FileProvider.getUriForFile(context, context.getPackageName() + ".fileprovider", file);
+            fos = (FileOutputStream) context.getContentResolver().openOutputStream(copyUri);
             image.compress(Bitmap.CompressFormat.PNG, 80, fos);
         } catch (FileNotFoundException e) {
             e.printStackTrace();
@@ -188,10 +193,12 @@ public class LatexUtil {
                 }
             }
         }
+        return file.getAbsolutePath();
     }
 
     /**
      * 将字符串转成MD5值
+     *
      * @param string 需要转换的字符串
      * @return 字符串的MD5值
      */
@@ -218,7 +225,7 @@ public class LatexUtil {
         return hex.toString();
     }
 
-    public static void clearData(){
+    public static void clearData() {
         try {
             FileUtil.delAllFile(latexSavePath);
         } catch (Exception e) {
@@ -226,7 +233,7 @@ public class LatexUtil {
         }
     }
 
-    public interface LatexCallback{
+    public interface LatexCallback {
 
         void onAnalysisLatex(String content);
 
